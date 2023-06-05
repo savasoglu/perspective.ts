@@ -3,6 +3,7 @@
 	"version": "0.0.0",
 	"main": "dist/index.js",
 	"license": "MIT",
+	"type": "module",
 	"devDependencies": {
 		"@babel/core": "^7.22.1",
 		"@babel/preset-env": "^7.22.4",
