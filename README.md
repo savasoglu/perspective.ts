@@ -77,7 +77,7 @@ If an error occurs during the API request, an `Error` will be thrown with the co
 ```typescript
 perspective.analyzeComment(comment).then(analysis => {
 	console.log(analysis);
-}.catch(error => {
+}).catch(error => {
 	console.error(error.message);
 });
 ```
