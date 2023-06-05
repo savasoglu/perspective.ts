@@ -32,9 +32,11 @@ import PerspectiveClient, { AnalyzeCommentResponse } from '@savasoglu/perspectiv
 const perspective = new PerspectiveClient('YOUR_API_KEY_HERE');
 
 const comment = 'Hey, can you please review this comment?';
-const analysis: AnalyzeCommentResponse = await perspective.analyzeComment(comment);
 
-console.log(analysis);
+perspective.analyzeComment(comment).then(analysis => {
+	console.log(analysis.attributeScores.TOXICITY?.summaryScore.value);
+});
+
 ```
 
 The `analyzeComment` method sends a request to the Google Perspective API to analyze the provided comment. It returns a `Promise` that resolves to an `AnalyzeCommentResponse` object containing the attribute scores and language information.
