@@ -75,12 +75,11 @@ if (attributeScore) {
 If an error occurs during the API request, an `Error` will be thrown with the corresponding error message.
 
 ```typescript
-try {
-	const analysis = await perspective.analyzeComment(comment);
+perspective.analyzeComment(comment).then(analysis => {
 	console.log(analysis);
-} catch (error) {
+}.catch(error => {
 	console.error(error.message);
-}
+});
 ```
 
 Ensure that you replace `YOUR_API_KEY_HERE` with your actual Google Perspective API key.
