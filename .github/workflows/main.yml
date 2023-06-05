@@ -7,10 +7,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install modules
         run: yarn
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1.3
-        with:
-          envkey_API_KEY: ${{ secrets.API_KEY }}
-          file_name: .env
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo API_KEY=${{ secrets.API_KEY }} >> .env
       - name: Run tests
         run: yarn test
