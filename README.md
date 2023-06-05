@@ -59,6 +59,7 @@ Each attribute score includes the following properties:
 
 ```typescript
 const attributeScore = analysis.attributeScores.TOXICITY;
+
 if (attributeScore) {
 	const { summaryScore, spanScores } = attributeScore;
 	console.log('Summary Score:', summaryScore.value);
