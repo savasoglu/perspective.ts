@@ -1,3 +1,3 @@
 module.exports = {
-	setupFiles: ['<rootDir>/.jest/setEnvVars.js'],
+	setupFiles: ['<rootDir>/test/setup-tests.ts'],
 };
