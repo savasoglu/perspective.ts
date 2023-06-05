@@ -27,7 +27,7 @@ npm install @savasoglu/perspective-ts
 5. Start moderating content and creating a safer online space!
 
 ```typescript
-import PerspectiveClient, { AnalyzeCommentResponse } from 'perspective-ts';
+import PerspectiveClient, { AnalyzeCommentResponse } from '@savasoglu/perspective-ts';
 
 const perspective = new PerspectiveClient('YOUR_API_KEY_HERE');
 
@@ -56,7 +56,7 @@ Each attribute score includes the following properties:
 -   `summaryScore`: A summary score indicating the overall attribute score for the entire comment.
 
 ```typescript
-import { AttributeScore, SpanScore } from 'perspective-ts';
+import { AttributeScore, SpanScore } from '@savasoglu/perspective-ts';
 
 const attributeScore: AttributeScore | undefined = analysis.attributeScores.TOXICITY;
 if (attributeScore) {
