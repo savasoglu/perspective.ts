@@ -9,13 +9,13 @@ You can easily install Perspective.TS using yarn or npm. Choose one of the follo
 yarn:
 
 ```shell
-yarn add perspective-ts
+yarn add @savasoglu/perspective-ts
 ```
 
 npm:
 
 ```shell
-npm install perspective-ts
+npm install @savasoglu/perspective-ts
 ```
 
 ## Getting Started 🚀
