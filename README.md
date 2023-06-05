@@ -58,14 +58,12 @@ Each attribute score includes the following properties:
 -   `summaryScore`: A summary score indicating the overall attribute score for the entire comment.
 
 ```typescript
-import { AttributeScore, SpanScore } from '@savasoglu/perspective-ts';
-
-const attributeScore: AttributeScore | undefined = analysis.attributeScores.TOXICITY;
+const attributeScore = analysis.attributeScores.TOXICITY;
 if (attributeScore) {
-	const summaryScore = attributeScore.summaryScore;
+	const { summaryScore, spanScores } = attributeScore;
 	console.log('Summary Score:', summaryScore.value);
 
-	const spanScores: SpanScore[] = attributeScore.spanScores;
+	const { spanScores } = attributeScore;
 	spanScores.forEach(spanScore => {
 		console.log('Span:', comment.substring(spanScore.begin, spanScore.end));
 		console.log('Span Score:', spanScore.score.value);
