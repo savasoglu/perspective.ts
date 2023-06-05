@@ -63,7 +63,6 @@ if (attributeScore) {
 	const { summaryScore, spanScores } = attributeScore;
 	console.log('Summary Score:', summaryScore.value);
 
-	const { spanScores } = attributeScore;
 	spanScores.forEach(spanScore => {
 		console.log('Span:', comment.substring(spanScore.begin, spanScore.end));
 		console.log('Span Score:', spanScore.score.value);
