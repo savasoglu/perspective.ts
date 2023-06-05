@@ -37,7 +37,7 @@ const analysis: AnalyzeCommentResponse = await perspective.analyzeComment(commen
 console.log(analysis);
 ```
 
-The `analyzeComment` method sends a request to the Google Perspective API to analyze the provided comment. It returns a promise that resolves to an `AnalyzeCommentResponse` object containing the attribute scores and language information.
+The `analyzeComment` method sends a request to the Google Perspective API to analyze the provided comment. It returns a `Promise` that resolves to an `AnalyzeCommentResponse` object containing the attribute scores and language information.
 
 ### Attribute Scores
 
